@@ -1,0 +1,188 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+
+\newcommand{\lineunder} {
+	\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header}[1] {
+	{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer}[3] {
+	{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact}[3] {
+	\vspace*{-8pt}\begin{center}{\LARGE \scshape {#1}}\\#2 \lineunder#3\end{center}\vspace*{-8pt}
+}
+
+\newenvironment{achievements} {
+	\begin{list}{$\bullet$}
+		{\topsep 0pt \itemsep -2pt}
+	}{
+		\vspace*{4pt}\end{list}
+	}
+
+\newcommand{\schoolwithcourses}[4]{
+	\textbf{#1} #2 $\bullet$ #3\\
+	#4 $\bullet$  Selected Coursework:\\
+	\vspace*{5pt}
+}
+
+\newcommand{\school}[4] {
+	\textbf{#1} #2 $\bullet$ #3\\
+	#4 \\
+}
+
+\newcommand{\area}[1] {\textbf{#1:}}
+
+\newcommand{\subject}[1] {#1 $\cdot$}
+
+\newcommand{\lastsubject}[1] {#1}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Wayne A. Rowcliffe}
+{2010 Lime Kiln Rd., Osage IA 50461}
+{(641) 832-8396 $\bullet$ wrowclif@iastate.edu}%  $\bullet$ http://ugrad.cs.jhu.edu/$\sim$cmichae}
+
+\header{Skills}
+
+	\begin{achievements}
+		\item{Experienced with Object Oriented Design in Java.}
+		\item{Three years experience working with / administrating Linux systems.}
+		\item{Familiarity with:
+			\subject{Java}
+			\subject{Vala}
+			\subject{C++}
+			\subject{Python}
+			\subject{GTK (Using Java, Vala, and Python bindings)}
+			\subject{DBus}
+			\subject{\LaTeX{}}
+			%\subject{Sockets}
+			%\subject{Tomcat}
+			%\subject{Servlets}
+			%\subject{JSP}
+			%\subject{JSF}
+			\subject{XML}
+			%\subject{Hibernate}
+			\subject{Javascript}
+			\subject{AJAX}
+			\subject{Linux}
+			\lastsubject{Windows}
+		}
+
+	\end{achievements}
+
+\header{Education}
+
+	\schoolwithcourses{Iowa State University}{Ames, IA, U.S.A.}{Bachelor of Science: Software Engineering, 2011}
+	{Cumulative GPA: 4.00/4.00}
+		\begin{achievements}
+			\item{
+				\area{Computer Science}
+				\subject{Object Oriented Design}
+				\subject{Data Structures}
+				\subject{User Interface Design}
+				\subject{Algorithm Analysis}
+				\subject{Software Documentation}
+				\subject{Design Patterns}
+				%\subject{Servlets}
+				%\subject{Networking}
+				\lastsubject{Databases}
+			}
+			\item{
+				\area{Mathematics}
+				\subject{Calculus I \& II}
+				\subject{Linear Algebra}
+				\subject{Differential Equations}
+				\lastsubject{Proofs}
+			}
+		\end{achievements}
+
+	\schoolwithcourses{Osage High School}{Osage, IA, U.S.A.}{Valedictorian, 2007}
+	{Cumulative GPA: 3.997/4.000}
+		\begin{achievements}
+			\item{
+				\area{Science}
+				\subject{Physics}
+				\subject{Chemistry}
+				\subject{Principles of Engineering}
+				\lastsubject{Principles of Technology}
+			}
+			\item{
+				\area{Mathematics}
+				\subject{Precalculus}
+				\subject{Trigonometry}
+				\lastsubject{Algebra}
+			}
+		\end{achievements}
+
+\header{Work History}
+
+	\employer{Iowa State University}{2009--2010}{Computer Science T.A.}
+		\begin{achievements}
+			\item{Wrote grading framework and grading scripts for homework assignments.}
+			\item{Tutored students regarding Object Oriented programming and Data Structures.}
+			\item{Led recitation for CS228: Data Structures.}
+			\item{Graded tests / homeworks.}
+		\end{achievements}
+
+	\employer{Maverick Software Consulting}{2008--2009}{Software Engineer Intern}
+		\begin{achievements}
+			\item{Assisted in the creation of web-apps for Thomson Reuters.}
+			\item{Implemented a Metrics-Comparison Application using Java, Tomcat, and SQL.}
+			\item{Created programmatic reports of database activity in PDF and HTML formats.}
+		\end{achievements}
+
+	\employer{Subway}{2005--2006}{Sandwich Artist}
+		\begin{achievements}
+			\item{Acted as night manager; Performed closing duties.}
+			\item{Monitored food and bread levels; Restocked as needed.}
+			\item{Made sandwiches.}
+		\end{achievements}
+
+\header{Honors and Awards}
+
+	\begin{achievements}
+		\item{Finalist in the National Merit Scholarship competition. Awarded an ISU Merit Scholarship.}
+		\item{Valedictorian of Osage High School class of 2007.}
+		\item{Received the Iowa State High Scholarship Award (Top 2\% of class) for the 2007--2008, 2008--2009, 2009--2010 school years.}
+		\item{Included in the Iowa State Dean's List all semesters at Iowa State.}
+	\end{achievements}
+
+\header{Projects}
+
+	\begin{achievements}
+		\item{Created a framework for Automated Grading of students' code using JUnit API (2009)}
+		\item{Used DBus to interface a Java BitTorrent client with a Vala GTK GUI. (2009)}
+		\item{Designed and Implemented a Client/Server-style multithreaded BitTorrent Application. (2009)}
+		\item{Worked in a group of four to create a Network-based Collaborative Document Editor. (2009)}
+		\item{Created a Network-based Game Server allowing multiple concurrent games with different players. (2008)}
+		\item{Implemented games such as Chess, Sudoku, Reversi, and Connect Four for the Game Server. (2008)}
+		\item{Designed a physically-accurate momentum-conserving Particle Collision Simulator. (2008)}
+	\end{achievements}
+
+\header{References Available Upon Request}
+
+
+\end{document}
